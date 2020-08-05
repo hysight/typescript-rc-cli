@@ -1,0 +1,38 @@
+.hv-login {
+    width: 100%;
+    min-height: 100%;
+    background-image: url("https://gw.alipayobjects.com/zos/rmsportal/TVYTbAXWheQpRcWDaDMu.svg");
+    // background-image: url("./images/background.jpg");
+    background-repeat: no-repeat;
+    position: relative;
+    .login-wrap {
+      width: 45%;
+      height: 40%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -70%);
+    }
+    .login-header {
+      line-height: 44px;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 20px;
+      .company-logo {
+        margin-right: 24px;
+        vertical-align: top;
+      }
+      .company-name {
+        font-size: 33px;
+        font-weight: 600;
+      }
+    }
+    .login-form {
+      margin: 0 auto;
+      width: 45%;
+      min-width: 320px;
+      height: 260px;
+      padding: 36px;
+      box-shadow: 0 0 100px rgba(0, 0, 0, 0.08);
+    }
+  }

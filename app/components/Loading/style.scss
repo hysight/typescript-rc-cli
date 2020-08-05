@@ -1,0 +1,29 @@
+/**
+ *@Author: mll
+ *Date: 2018/5/29 16:54
+ *@Last Modified by: mll
+ *@Last Modified time: 2018/5/29 16:54
+ *Email: maliangliang@hiynn.com
+ *File Path: Machine-Learning - style
+ *@File Name: style
+ *@Description: 
+ */
+
+.hc-loading {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 9999;
+
+  i.anticon {
+    font-size: 60px;
+    color: #31A8E9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

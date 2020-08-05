@@ -1,0 +1,167 @@
+/* CSS Document */
+
+* {
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+input, textarea {
+	user-select: text;
+	-moz-user-select: text;
+	-webkit-user-select: text;
+	-ms-user-select: text;
+}
+html {
+	color: #53585f;
+	width: 100%;
+    height: 100%;
+}
+html, input, textarea {
+	color: #53585f;
+}
+body {
+
+	overflow: hidden;
+	height: 100%;
+}
+body, td, th {
+	font-size: 12px;
+	/*font-family: simhei, Arial;*/
+	/*font-family: "Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+}
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, table, iframe, p, img {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: #515151;
+}
+/*解决antd 坑人得问题*/
+body {
+	div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, table, iframe, p, img {
+		margin-bottom: 0;
+	}
+}
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, table, iframe, p, img {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: #515151;
+}
+article, section, hgroup, header, footer, nav {
+	display: block;
+}
+div, p {
+	display: block;
+}
+img {
+	border: none;
+}
+ul, ol, dl {
+	list-style: none;
+}
+fieldset, img {
+	border: 0;
+}
+button {
+	cursor: pointer;
+}
+textarea {
+	resize: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+address, caption, cite, code, dfn, em, th, var, optgroup {
+	font-style: normal;
+	font-weight: normal;
+}
+input, button, textarea, select, optgroup, option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+a {
+	//color: #ed4441;
+	text-decoration: none;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited, a:hover {
+	cursor: pointer;
+}
+a:active, a:focus {
+	outline: 0;
+}
+input, button, textarea {
+	border: none;
+	outline: none;
+}
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+	outline: 0 none;
+}
+input::-ms-clear {
+	display: none;
+}
+input::-ms-reveal {
+	display: none;
+}
+.clearfix:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+.clearfix {
+	display: inline-block;
+}
+* + html .clearfix {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}
+.clearfloat {
+	display: inline-block;
+}
+
+/* 悬浮类 */
+
+/*.f_left  float:left !important
+.f_right  float:right !important
+.fill-width
+    float:left
+    width:100%
+
+
+.hidden  display:none !important*/
+
+/*.redlink  color:#ea4b17 */
+h2, h3, h4, h5 {
+	font-family: "Micorsoft YaHei";
+	font-weight: bold;
+	color: #4d4d4d;
+}
+h1 {
+	font-size: 20px;
+}
+h2 {
+	font-size: 16px;
+}
+h3 {
+	font-size: 16px;
+}
+h4 {
+	font-size: 14px;
+}
+h5 {
+	font-size: 13px;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+	background-color: none;
+}

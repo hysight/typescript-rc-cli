@@ -1,0 +1,61 @@
+/**
+ *@Author: hy-zhangb
+ *Date: 2018/9/15 16:54
+ * @Last Modified by: wuyanxia
+ * @Last Modified time: 2019-05-10 10:55:19
+ *Email: lovewinders@163.com
+ *File Path: antd-admin - style
+ *@File Name: style
+ *@Description: Description
+ */
+.hc-sider-menu {
+  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+  position: relative;
+  z-index: 1;
+  .back-spaces {
+    width: 100%;
+    height: 40px;
+    background: #3f4f5e;
+    color: #fff;
+    line-height: 40px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 5px 20px;
+    display: flex;
+
+    .img-default {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #2db7f5;
+      text-align: center;
+      line-height: 30px;
+      font-size: 14px;
+    }
+    span.space-name {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 14px;
+      line-height: 30px;
+      text-indent: 1em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 200px;
+    }
+    i {
+      float: right;
+      line-height: 30px;
+      font-size: 18px;
+      color: #fff;
+    }
+    .data-global {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 14px;
+      line-height: 30px;
+      text-align: center;
+      // padding-left:20px;
+      width: 200px;
+    }
+  }
+}

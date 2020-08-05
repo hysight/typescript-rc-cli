@@ -1,0 +1,16 @@
+.hv-home {
+    height: 100%;
+    position: relative;
+    .home-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        text-align: center;
+        h3 {
+            line-height: 42px;
+            font-size: 24px;
+            color: #4d80bf;
+        }
+    }
+}

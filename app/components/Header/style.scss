@@ -1,0 +1,17 @@
+.hc-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    .header-logo {
+        img, h1 {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        h1 {
+            margin-left: 15px;
+            font-size: 20px;
+            font-weight: 600;
+            color: rgba(0, 0, 0, .85);
+        }
+    }
+}

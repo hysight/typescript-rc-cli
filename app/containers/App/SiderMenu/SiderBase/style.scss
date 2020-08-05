@@ -1,0 +1,18 @@
+/**
+ *@Author: hy-zhangb
+ *Date: 2018/9/15 17:06
+ * @Last Modified by: wuyanxia
+ * @Last Modified time: 2018-11-23 20:50:03
+ *Email: lovewinders@163.com
+ *File Path: antd-admin - style
+ *@File Name: style
+ *@Description: Description
+ */
+.hm-sider-base {
+  &.ant-menu-inline-collapsed {
+    .item-icon + span {
+      max-width: 0;
+      opacity: 0;
+    }
+  }
+}

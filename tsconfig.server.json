@@ -1,0 +1,35 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "allowJs": true,
+    "module": "commonjs",// esnext commonjs
+    "alwaysStrict": true,
+    "target": "esnext",
+    "sourceMap": true,
+    "jsx": "react",
+    "jsxFactory": "React.createElement",
+    "baseUrl": ".",
+    "paths":{
+        "app/*": ["app/*"],
+        "*": ["types/*"]
+    },
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "typeRoots": ["Models", "typings", "node_modules/@types"]
+  },
+  "include": [
+    "app",
+    "server"
+  ],// 要打包的文件
+  "exclude": [
+    "node_modules"
+  ]
+}

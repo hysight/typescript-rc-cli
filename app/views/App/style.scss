@@ -1,0 +1,45 @@
+#App {
+    // width: 3072px;
+    // height: 2304px;
+    // position: relative;
+    // background: url("./images/Back.png") center no-repeat;
+    // background-size: 100% 100%;
+    // background: -webkit-radial-gradient(50% 20%, closest-corner,#222250 5%,black 80%);
+    // background: radial-gradient(#222250 5%,black 80%);
+    #gameContainer {
+        background: url("./images/Back.png") center no-repeat !important;
+        background-size: 100% 100% !important;
+        .logo {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -100px -100px 0 0;
+            background: url('./images/logo.png') no-repeat;
+            background-size: 100% 100%;
+        }
+        .progress {
+            width: 100px;
+            height: 10px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: 20px -100px 0 0;
+            background:  #ffffff;
+            .full {
+                height: 10px;
+                background: rgb(43, 43, 167);
+            }
+        }
+    }
+    .reactApp {
+        width: 3072px;
+        height: 2304px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        pointer-events: none;
+    }
+}

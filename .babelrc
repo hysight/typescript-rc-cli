@@ -1,0 +1,36 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        // "useBuiltIns": undefined,
+        "targets": { 
+          "node": "current" 
+        },
+      },
+    ],
+    "@babel/preset-react",
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    // "@babel/plugin-transform-modules-commonjs",
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-proposal-object-rest-spread",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties", { "loose" : true }],
+    "@babel/plugin-syntax-dynamic-import",
+    "@loadable/babel-plugin",
+    // "@babel/plugin-transform-typescript",
+    // "@babel/plugin-syntax-typescript",
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        // "style": "css",
+        "style": true
+        /*"libraryDirectory": "es",
+        "style": "css"*/
+      }
+    ],
+  ]
+}
