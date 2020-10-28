@@ -30,7 +30,7 @@ function SpaceList(props: Props): JSX.Element {
     const goHome = (id: string): void => {
 
         // console.log(props);
-        history.push(`/${id}/home`);
+        history.push(`/home`);
         // debugger;
     
     };

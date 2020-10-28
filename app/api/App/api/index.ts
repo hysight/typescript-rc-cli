@@ -9,10 +9,22 @@
 import Fetch from '@hysight/fetch';
 
 interface ApiProps {
+    fetchUserMenuTree: () => void;
     fetchUserInfoData: () => void;
 }
 
 const Api: ApiProps = {
+    fetchUserMenuTree() {
+
+        return Fetch('/goadmin/api/{version}/menurole')
+        .then((res) => res)
+        .catch((err) => {
+
+            console.log(err);
+
+        });
+
+    },
     // 查询用户基本信息
     fetchUserInfoData() {
 

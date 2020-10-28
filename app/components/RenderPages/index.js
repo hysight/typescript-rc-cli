@@ -11,7 +11,7 @@
 'use strict';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import PageRoutes from './PageRoutes';
 

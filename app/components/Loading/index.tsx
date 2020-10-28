@@ -1,10 +1,10 @@
 import React from 'react';
-import {Icon} from 'antd';
+import { LoadingOutlined } from '@ant-design/icons';
 
 import './style.scss';
 
 export default () => (
     <div className='hc-loading'>
-        <Icon type='loading' />
+        <LoadingOutlined />
     </div>
 );

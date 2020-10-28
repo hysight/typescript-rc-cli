@@ -194,7 +194,7 @@ const webpackProConfig = target => {
             ]
         }),
         new HtmlWebpackPlugin({
-            title: '技术线研发中心脚手架',
+            title: '后台管理系统',
             hash: false,
             chunks: ['app'],
             favicon: assignPath(client, 'favicon.ico'),

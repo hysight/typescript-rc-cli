@@ -9,7 +9,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { Icon } from 'antd';
+import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 
 import { StateProps, Props } from 'app/containers/App/types';
 
@@ -37,10 +37,12 @@ function SiderMenuIcon(props: Props): JSX.Element {
 
     };
 
+    const IconComp = isExpandSiderMenu ? MenuUnfoldOutlined : MenuFoldOutlined;
+
     return (
-        <Icon
+        <IconComp
             className='hm-sider-menu-icon'
-            type={isExpandSiderMenu ? 'menu-unfold' : 'menu-fold'}
+            // type={isExpandSiderMenu ? 'action menu-unfold' : 'action menu-fold'}
             onClick={toggleStatus}
         />
     );

@@ -17,6 +17,9 @@ import { ConnectedRouter } from 'connected-react-router';
 // createHistory
 import { createBrowserHistory } from 'history';
 
+import { ConfigProvider } from 'antd';
+import zhCN from 'antd/es/locale/zh_CN';
+
 import Routes from './Routes';
 
 // storeFactory
@@ -25,7 +28,7 @@ import storeFactory from 'app/store';
 declare const __BASENAME__: string;
 
 const history = createBrowserHistory({
-    // basename: __BASENAME__,
+    basename: __BASENAME__,
 });
 
 // store
@@ -43,11 +46,13 @@ class App extends React.Component {
 
         return (
             <Provider store={store} context={ReactReduxContext}>
-                <ConnectedRouter history={history} context={ReactReduxContext}>
-                    <Router history={history}>
-                        <Routes />
-                    </Router>
-                </ConnectedRouter>
+                <ConfigProvider locale={zhCN}>
+                    <ConnectedRouter history={history} context={ReactReduxContext}>
+                        <Router history={history}>
+                            <Routes />
+                        </Router>
+                    </ConnectedRouter>
+                </ConfigProvider>
             </Provider>
         );
     

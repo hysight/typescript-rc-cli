@@ -10,7 +10,8 @@ import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { Layout, Menu, Icon } from 'antd';
+import { Layout, Menu } from 'antd';
+import Icon, { QuestionCircleOutlined, UserOutlined, UserDeleteOutlined, SettingOutlined } from '@ant-design/icons';
 
 import { FETCH_USER_INFO } from 'app/constant/App';
 
@@ -27,7 +28,8 @@ const { Header, Content } = Layout;
 
 function App(props: Props): JSX.Element {
 
-    const { dispatch, routes, children, userInfo } = props;
+    const { dispatch, children, routes, userInfo } = props;
+    debugger
 
     React.useEffect(() => {
 
@@ -52,25 +54,25 @@ function App(props: Props): JSX.Element {
                             target='blank' 
                             style={{ color: '#53585f', display: 'inlineBlock' }} title={'帮助中心'}
                         >
-                            <Icon type='question-circle' />
+                            <QuestionCircleOutlined />
                         </NavLink>
                         <Menu mode='horizontal' style={{ lineHeight: '64px', background: 'none' }}>
                             {userInfo ? (
                                 <SubMenu
                                     title={
                                         <span>
-                                            <Icon type='user' />
+                                            <UserOutlined />
                                             {userInfo.nickName}
                                         </span>
                                     }
                                 >
                                     <Menu.Item key='personalcenter'>
                                         <NavLink to={'/user'} target='blank'>
-                                            <Icon type='setting' /> 个人中心
+                                            <SettingOutlined /> 个人中心
                                         </NavLink>
                                     </Menu.Item>
                                     <Menu.Item key='logout'>
-                                        <Link to='/login'><Icon type='user' />退出登录</Link>
+                                        <Link to='/login'><UserDeleteOutlined />退出登录</Link>
                                     </Menu.Item>
                                 </SubMenu>
                             ) : null}

@@ -7,7 +7,7 @@
  * @Description: 
  */
 import React from 'react';
-import { Layout, Menu, Icon } from 'antd';
+import { Layout, Menu } from 'antd';
 
 // components
 import Header from 'app/components/Header';

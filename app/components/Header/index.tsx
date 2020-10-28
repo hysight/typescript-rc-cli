@@ -7,8 +7,9 @@
  * @Description: 
  */
 import React from 'react';
-import { withRouter, NavLink, Link } from 'react-router-dom';
-import { Layout, Menu, Icon } from 'antd';
+import { NavLink, Link } from 'react-router-dom';
+import { Layout, Menu } from 'antd';
+import { QuestionCircleOutlined, UserOutlined, SettingOutlined } from '@ant-design/icons';
 
 import './style.scss';
 
@@ -22,15 +23,15 @@ function Header(props): JSX.Element {
             <div className='hc-header'>
                 <div className='header-logo'>
                     <Link to={'/'} >
-                        <img width={40} height={40} src={require('./images/logo.png')} />
-                        <h1>技术线研发中心脚手架</h1>
+                        <img width={40} height={40} src={require('../../../public/images/logo.png')} />
+                        <h1>后台管理系统</h1>
                         {/* <img width={32} height={32} src={require('./images/logo-bk.png')} />
                         <h1>扬州警务大数据-可视化分析平台</h1> */}
                     </Link>
                 </div>
                 <div className='header-panel'>
                     <NavLink to={'/help'} target='blank' style={{ color: '#53585f' }} title={'帮助中心'}>
-                        <Icon type='question-circle' />
+                        <QuestionCircleOutlined />
                     </NavLink>
                     <Menu
                         mode='horizontal'
@@ -39,18 +40,18 @@ function Header(props): JSX.Element {
                         <SubMenu
                             title={
                                 <span>
-                                    <Icon type='user' />
+                                    <UserOutlined />
                                     admin
                                 </span>
                             }
                         >
                             <Menu.Item key='user-center'>
                                 <NavLink to={'/user'} target='blank'>
-                                    <Icon type='setting' /> 个人中心
+                                    <SettingOutlined /> 个人中心
                                 </NavLink>
                             </Menu.Item>
                             <Menu.Item key='logout'>
-                                <Link to='/login'><Icon type='user' />退出登录</Link>
+                                <Link to='/login'><UserOutlined />退出登录</Link>
                             </Menu.Item>
                         </SubMenu>
                     </Menu>

@@ -21,7 +21,7 @@ import 'app/utils/loader';
 import App from './views/App';
 
 // 是否服务端渲染
-const renderDOM = process.env.NODE_SSR ? ReactDOM.hydrate : ReactDOM.hydrate;
+const renderDOM = process.env.NODE_SSR ? ReactDOM.hydrate : ReactDOM.render;
 
 //为了确保loadable加载完成
 declare global {
@@ -30,9 +30,14 @@ declare global {
     }
 }
 
+process.env.NODE_SSR ?
 loadableReady(() => {
     renderDOM(
         <App />,
         document.querySelector('#App') as HTMLElement,
     );
-});
+}) :
+renderDOM(
+    <App />,
+    document.querySelector('#App') as HTMLElement,
+);

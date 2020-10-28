@@ -35,7 +35,7 @@ Fetch().default.baseUrl = (url: string): string => {
 
 };
 Fetch().default.headers['Content-Type'] = 'application/json';
-Fetch().default.headers['X-Token'] = localStorage.getItem('token');
+Fetch().default.headers['Authorization'] = localStorage.getItem('token');
 // Fetch().default.headers["mode"] = 'cors';
 Fetch().interceptors.response = (response: ResponseProps): void | ResponseProps => {
 

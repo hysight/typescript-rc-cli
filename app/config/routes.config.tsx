@@ -55,14 +55,56 @@ const Dashboard = loadable(
     }
 );
 
+const UserManage = loadable(
+    () => import(/* webpackChunkName: "UserManage" */ 'app/views/UserManage'), 
+    {
+        fallback: <Loading />
+    }
+);
+
+const RoleManage = loadable(
+    () => import(/* webpackChunkName: "RoleManage" */ 'app/views/RoleManage'), 
+    {
+        fallback: <Loading />
+    }
+);
+
+const MenuManage = loadable(
+    () => import(/* webpackChunkName: "MenuManage" */ 'app/views/MenuManage'), 
+    {
+        fallback: <Loading />
+    }
+);
+
+export const compConfig = {
+    Home,
+    Dashboard,
+    UserManage,
+    RoleManage,
+    MenuManage
+}
+
 // 页面路由配置项
 export default [
     {
-        path: '/',
-        redirect: '/login',
-        exact: true,
-        strict: true,
-        model: 'LOGIN'
+        path: '/', // 必填
+        redirect: '/login', // 扩展
+        exact: true, // 扩展
+        strict: true, // 扩展
+        //
+        id: 0, // 必填
+        name: '', // 必填
+        title: '', // 选填
+        icon: '', // 必填
+        type: '', // 选填
+        parentId: 0, // 必填
+        component: '', // 选填
+        sort: 0, // 必填
+        hide: false, // 是否显隐菜单
+        createBy: '', // 创建人
+        updateBy: '', // 修改人
+        roleId: '', // 角色
+        routes: [] // Array<Object> 子菜单集合
     },
     // login
     {
@@ -76,36 +118,63 @@ export default [
     },
     // app
     {
-        path: '/:wId',
+        path: '/',
         icon: 'bars',
         name: '首页',
         component: App,
         Routes: Authorized,
-        routes: [
-            {
-                path: '/:wId/home',
-                icon: 'bars',
-                name: '空间入口',
-                hideInMenu: true,
-                component: Home,
-                model: 'HOME'
-            },
-            {
-                path: '/:wId/dashboard',
-                icon: 'bars',
-                name: 'Dashboard',
-                // hideInMenu: true,
-                component: Dashboard,
-                model: 'DASHBOARD'
-            },
-            {
-                path: '/:wId/table',
-                icon: 'bars',
-                name: '表单页',
-                // hideInMenu: true,
-                component: Home,
-                model: 'TABLE'
-            },
+        children: [
+            // {
+            //     path: '/home',
+            //     icon: 'bars',
+            //     name: '空间入口',
+            //     hide: true,
+            //     component: Home,
+            // },
+            // {
+            //     path: '/dashboard',
+            //     icon: 'bars',
+            //     name: 'Dashboard',
+            //     // hide: true,
+            //     component: Dashboard,
+            // },
+            // {
+            //     path: '/table',
+            //     icon: 'bars',
+            //     name: '表单页',
+            //     // hide: true,
+            //     component: Home,
+            // },
+            // {
+            //     path: '/setting',
+            //     icon: 'setting',
+            //     name: '系统管理',
+            //     // hide: true,
+            //     // component: Home,
+            //     children: [
+            //         {
+            //             path: '/setting/user',
+            //             icon: 'user',
+            //             name: '用户管理',
+            //             // hide: true,
+            //             component: UserManage,
+            //         },
+            //         {
+            //             path: '/setting/roles',
+            //             icon: 'user',
+            //             name: '角色管理',
+            //             // hide: true,
+            //             component: RoleManage,
+            //         },
+            //         {
+            //             path: '/setting/menu',
+            //             icon: 'user',
+            //             name: '菜单管理',
+            //             // hide: true,
+            //             component: MenuManage,
+            //         }
+            //     ]
+            // },
         ]
     }
 ];

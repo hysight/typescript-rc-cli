@@ -17,7 +17,7 @@ const Api: ApiProps = {
     // 登录
     fetchLoginData(data) {
 
-        return Fetch('/api/{version}/admin/auth/login', {
+        return Fetch('/goadmin/login', {
             method: 'POST',
             data
         })

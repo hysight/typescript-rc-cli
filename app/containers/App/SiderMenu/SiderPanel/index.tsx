@@ -22,8 +22,8 @@ function SiderPanel(props): JSX.Element {
     return (
         <div className={'hm-sider-panel'}>
             <Link to={'/space'}>
-                <img width={40} height={40} src={require('./images/logo.png')} />
-                <h1>技术线研发中心</h1>
+                <img width={40} height={40} src={require('../../../../../public/images/logo.png')} />
+                <h1>后台管理系统</h1>
                 {/* <p>
                     <span>{document.title}</span>
                 </p> */}

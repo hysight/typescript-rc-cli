@@ -64,9 +64,10 @@ app.all(
 
 // home
 app.use(
-    '^/123api/*',
+    '^/goadmin/*',
     proxy({
-        target: 'http://localhost:8000',
+        target: 'http://dc0.licaimofang.com',
+        // target: 'https://api.go-admin.dev',
         changeOrigin: true
     })
 );

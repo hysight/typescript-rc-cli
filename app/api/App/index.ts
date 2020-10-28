@@ -12,10 +12,14 @@ import api from './api';
 import mock from './mock';
 
 interface ApiProps {
+    fetchUserMenuTree: any;
     fetchUserInfoData: any;
 }
 
 const Api: ApiProps = {
+    fetchUserMenuTree: {
+        isMock: true
+    },
     // 查询用户基本信息
     fetchUserInfoData: {
         isMock: true,

@@ -15,11 +15,13 @@ import {
     USER_INFO_SUCCESS
 } from 'app/constant/App';
 
+export const initialState = {
+    isExpandSiderMenu: false,
+    userInfo: null,
+}
+
 export default createReducer(
-    {
-        isExpandSiderMenu: false,
-        userInfo: null,
-    },
+    initialState,
     {
         [IS_EXPAND_SIDER_MENU_SUCCESS]: (state, action) => {
 
